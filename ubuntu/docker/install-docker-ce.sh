@@ -25,3 +25,7 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
+# https://docs.docker.com/install/linux/linux-postinstall/
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
