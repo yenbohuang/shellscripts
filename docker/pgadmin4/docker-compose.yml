@@ -1,0 +1,17 @@
+# https://www.pgadmin.org/docs/pgadmin4/4.15/container_deployment.html
+
+version: "3.7"
+services:
+  pgadmin4:
+    container_name: pgadmin4
+    image: dpage/pgadmin4:4.15
+    ports:
+      - "10080:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=noreply@localhost.org
+      - PGADMIN_DEFAULT_PASSWORD=p@ssw0rd
+      - PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION=True
+      - PGADMIN_CONFIG_LOGIN_BANNER="Authorised users only!"
+      - PGADMIN_CONFIG_CONSOLE_LOG_LEVEL=10
+    volumes:
+     - /home/yenbohuang/pgadmin-storage:/var/lib/pgadmin
