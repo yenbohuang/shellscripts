@@ -1,2 +1,4 @@
 #!/bin/sh
-ifconfig | grep 'inet 10.' | cut -d ' ' -f 10
+
+# https://opensource.com/article/18/5/how-find-ip-address-linux
+hostname -I | awk '{print $1}'
