@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+
+  # https://github.com/zaproxy/zaproxy/wiki/WebSwing
+  webswing:
+    container_name: webswing
+    image: "owasp/zap2docker-stable"
+    user: zap
+    stdin_open: true
+    restart: always
+    command: zap-webswing.sh
+    ports:
+      - 18080:8080
+      - 18090:8090
+    networks:
+      - owaspzaproxynet
+
+networks:
+  owaspzaproxynet:
