@@ -4,6 +4,7 @@
 # Use 'nsenter' when 'docker exec' does not work.
 
 CONTAINER_NAME_OR_ID=$1
+COMMAND=$2
 PID=$(docker inspect --format \{{.State.Pid\}} $CONTAINER_NAME_OR_ID)
 
-sudo nsenter --target $PID --mount --uts --ipc --net --pid
+sudo nsenter --target $PID --mount --uts --ipc --net --pid $COMMAND
