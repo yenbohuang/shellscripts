@@ -8,6 +8,7 @@ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/dock
 # https://linuxconfig.org/how-to-install-docker-in-rhel-8
 sudo yum install --nobest docker-ce docker-ce-cli containerd.io
 
+sudo systemctl enable docker
 sudo systemctl start docker
 
 # https://docs.docker.com/install/linux/linux-postinstall/
