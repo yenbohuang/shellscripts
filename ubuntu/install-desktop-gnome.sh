@@ -1,4 +1,4 @@
 #!/bin/sh
 
-# https://wiki.ubuntu.com/UbuntuGNOME/Installation
-sudo apt-get install ubuntu-gnome-desktop
+https://linuxconfig.org/ubuntu-20-04-gnome-flashback-desktop-installation
+sudo apt install gnome-session-flashback
